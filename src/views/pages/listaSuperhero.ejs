@@ -1,0 +1,36 @@
+<div class="container py-4">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <% superheroes.forEach(superheroe => { %>
+        <div class="col">
+          <div class="card border-0 shadow-lg h-100 rounded-4">
+            <div class="card-body">
+              <h4 class="card-title mb-1 fw-bold text-primary">
+                <i class="bi bi-shield-shaded me-2"></i><%= superheroe.nombreSuperHeroe %>
+              </h4>
+              <h6 class="card-subtitle mb-3 text-muted fst-italic">Alias: <%= superheroe.nombreReal %></h6>
+  
+              <ul class="list-unstyled mb-4">
+                <li><strong>Edad:</strong> <%= superheroe.edad %></li>
+                <li><strong>Planeta:</strong> <%= superheroe.planetaOrigen %></li>
+                <li><strong>Debilidad:</strong> <%= superheroe.debilidad %></li>
+                <li><strong>Poderes:</strong> <%= superheroe.poderes %></li>
+                <li><strong>Aliados:</strong> <%= superheroe.aliados %></li>
+                <li><strong>Enemigos:</strong> <%= superheroe.enemigos %></li>
+                <li><strong>Creador:</strong> <%= superheroe.creador %></li>
+              </ul>
+  
+              <div class="d-flex justify-content-end gap-2">
+                <button class="btn btn-outline-danger btn-sm rounded-pill px-3" onclick="eliminarSuperheroe('<%= superheroe._id %>')">
+                  <i class="bi bi-trash3"></i> Eliminar
+                </button>
+                <button class="btn btn-outline-success btn-sm rounded-pill px-3" onclick="editarSuperheroe('<%= superheroe._id %>')">
+                  <i class="bi bi-pencil-square"></i> Modificar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+  <script src="/js/listaSuperhero.js"></script>

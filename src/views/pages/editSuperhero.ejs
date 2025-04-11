@@ -1,0 +1,36 @@
+<h2>Editar Superheroe</h2>
+<div class="ms-3">
+    <form id="editsuperhero" class="form-control" >
+    <div class="row">
+        <div clas="col-md-5">
+         <input type="hidden" name="id" id="id" value="<%= superheroe.id %>">   
+        <label for="namesuper" class="form-label">Nombre de Superheroe:</label> 
+        <input type="text" class="form-control" id="namesuper" name="nombreSuperHeroe" value="<%=superheroe.nombreSuperHeroe %>" required>
+        </div>
+    </div>
+        <label for="namereal"  class="form-label">Nombre Real:</label> 
+        <input type="text" class="form-control" id="namereal" name="nombreReal" value="<%= superheroe.nombreReal %>" required> 
+        <label for="edad"  class="form-label">Edad:</label> 
+        <input type="number" class="form-control" id="edad" name="edad" value="<%= superheroe.edad %>" required  min="0"> 
+        <label for="planeta"  class="form-label">Planeta de Origen:</label> 
+        <input type="text" class="form-control" id="planeta" name="planetaOrigen" value="<%= superheroe.planetaOrigen %>"required> 
+        <label for="debilidad"  class="form-label">Debilidad:</label> 
+        <input type="text" class="form-control" id="debilidad" name="debilidad" value="<%= superheroe.debilidad %>" required> 
+        <label for="poderes"  class="form-label">Poderes:</label> 
+        <textarea id="poderes" class="form-control" rows="4" cols="50" name="poderes" placeholder="agregar los poderes separadospor coma (excepto al final)" required><%= superheroe.poderes.join(', ') %></textarea> 
+        <label for="aliados"  class="form-label">Aliados:</label> 
+        <textarea id="aliados" class="form-control" rows="4" cols="50" name="aliados" placeholder="agregar los aliados separados por coma (excepto al final)" required><%= superheroe.aliados.join(', ') %></textarea> 
+        <label for="enemigos"  class="form-label">Enemigos:</label> 
+        <textarea id="enemigos" class="form-control" rows="4" cols="50" name="enemigos" placeholder="agregar los enemigos separados por coma (excepto al final)"  required><%= superheroe.enemigos.join(', ') %></textarea> 
+        <label for="creador">Creador:</label> 
+        <input type="text" class="form-control" id="creador" name="creador" value="<%= superheroe.creador %>" required></textarea> 
+        
+       <div class="mt-2 mb-4">
+        <input type="submit"class="btn btn-success" value="agregar">
+        <input type="reset" class="btn btn-danger"  value="cancelar">
+       </div>
+    </form>
+</div>
+
+<script src="/js/editSuperhero.js"></script>
+
